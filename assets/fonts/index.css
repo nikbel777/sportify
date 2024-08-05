@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "DelaGothicOne";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./DelaGothicOne/DelaGothicOne-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ProximaNova/ProximaNova-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Raleway/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Raleway/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/Raleway/Raleway-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Raleway/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: "Bluu Next Cyrillic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/BluuNextCyrillic/Bluu_Next_Cyrillic_700.woff2") format("woff2"),
+    url("../fonts/BluuNextCyrillic/Bluu_Next_Cyrillic_700.ttf") format("truetype");
+}

@@ -1,0 +1,9 @@
+:root {
+  --inline-offset: max(40px, calc((100% - 1400px) / 2));
+}
+
+@media (max-width: 59px) {
+  :root {
+    --inline-offset: calc((100% - 1264px) / 2);
+  }
+}
