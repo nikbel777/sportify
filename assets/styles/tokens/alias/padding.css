@@ -2,8 +2,14 @@
   --inline-offset: max(40px, calc((100% - 1400px) / 2));
 }
 
-@media (max-width: 59px) {
+@media (max-width: 1170px) {
   :root {
-    --inline-offset: calc((100% - 1264px) / 2);
+    --inline-offset: max(30px, calc((100% - 1400px) / 2));
+  }
+}
+
+@media (max-width: 740px) {
+  :root {
+    --inline-offset: max(15px, calc((100% - 1400px) / 2));
   }
 }

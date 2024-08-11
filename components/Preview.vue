@@ -10,10 +10,7 @@ const clickPreview = () => {
       text_content:
         "Укажите имя и телефон, мы свяжемся и ответим на все ваши интересующие вопросы.",
       text_btn: `Оставить заявку`,
-      lead_title: `уалейкум асалам (из описания квартиры)`,
-      cbSuccessFetch() {
-        ymReachGoal("send_detail-card_plan_order");
-      },
+
     },
   };
 };
@@ -102,6 +99,34 @@ const clickPreview = () => {
     transition: all 0.2s ease-in-out;
     color: #92918e;
     background-color: #202020;
+  }
+}
+
+@media (max-width: 1170px) {
+  .Preview__contentH4 {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 740px) {
+  .Preview__contentH4 {
+    font-size: 40px;
+    line-height: 100%;
+    margin-bottom: 20px;
+  }
+
+  .Preview__content {
+    padding: 60px var(--inline-offset) 60px;
+  }
+
+  .Preview__img {
+    img {
+      object-position: 27% 50%;
+    }
+  }
+
+  .Preview__contentBtn {
+    font-size: 20px;
   }
 }
 </style>

@@ -1,4 +1,26 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+onMounted(() => {
+  const links = document.querySelectorAll("a[href^='#']");
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const toElement = (e.target as HTMLElement).getAttribute("href")!.replace("#", "");
+
+      if (window.innerWidth > 1170) {
+        (document.getElementById(toElement) as HTMLElement).scrollIntoView({
+          behavior: "smooth",
+        });
+      } else {
+        setTimeout(() => {
+          (document.getElementById(toElement) as HTMLElement).scrollIntoView({
+            behavior: "smooth",
+          });
+        }, 200);
+      }
+    });
+  });
+});
+</script>
 
 <template>
   <section class="Footer">
@@ -9,11 +31,11 @@
       </div>
 
       <div class="Footer__links">
-        <a class="Footer__linkA" href="">О нас</a>
-        <a class="Footer__linkA" href="">Калькулятор</a>
-        <a class="Footer__linkA" href="">Услуги</a>
-        <a class="Footer__linkA" href="">Вопросы</a>
-        <a class="Footer__linkA" href="">Отзывы</a>
+        <a class="Footer__linkA" href="#about_us">О нас</a>
+        <a class="Footer__linkA" href="#calculate">Калькулятор</a>
+        <a class="Footer__linkA" href="#services">Услуги</a>
+        <a class="Footer__linkA" href="#questions">Вопросы</a>
+        <a class="Footer__linkA" href="#reviews">Отзывы</a>
       </div>
 
       <div class="Footer__social">
@@ -28,14 +50,23 @@
           />
         </div>
         <div class="Footer__socialLinks">
-          <img class="Footer__socialLink" src="/icons/vk_white.png" alt="" width="35" height="35" />
-          <img
-            class="Footer__socialLink"
-            src="/icons/telegram_white.png"
-            alt=""
-            width="35"
-            height="35"
-          />
+          <a href="https://vk.com/sport_ify"
+            ><img
+              class="Footer__socialLink"
+              src="/icons/vk_white.png"
+              alt=""
+              width="35"
+              height="35"
+          /></a>
+
+          <a href="https://t.me/sport_ify">
+            <img
+              class="Footer__socialLink"
+              src="/icons/telegram_white.png"
+              alt=""
+              width="35"
+              height="35"
+          /></a>
         </div>
       </div>
     </div>
@@ -131,5 +162,30 @@
   display: flex;
   justify-content: center;
   gap: 30px;
+}
+
+@media (max-width: 1000px) {
+  .Footer__logoH4 {
+    font-size: 80px;
+    margin-bottom: 0px;
+  }
+  .Footer__links {
+    display: none;
+  }
+}
+
+@media (max-width: 740px) {
+  .Footer__content {
+    flex-direction: column;
+  }
+  .Footer__logoH4 {
+    font-size: 65px;
+  }
+  .Footer__logoP {
+    margin-bottom: 40px;
+  }
+  .Footer__social {
+    margin-bottom: 40px;
+  }
 }
 </style>

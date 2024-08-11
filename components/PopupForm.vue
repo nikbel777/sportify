@@ -6,8 +6,6 @@ export interface IPopupFormProps {
     text_header: string;
     text_content: string;
     text_btn: string;
-    lead_title: string;
-    cbSuccessFetch?: () => void;
     popup_notify_props_success?: IPopupNotifyProps;
   };
 }
@@ -17,7 +15,6 @@ var emit = defineEmits(["close"]);
 
 var { user_name, user_phone, error_user_name, error_user_phone, sendFormRequest } = useFormRequest(
   () => {
-    props.data.cbSuccessFetch && props.data.cbSuccessFetch();
     closePopup();
   },
   props.data.popup_notify_props_success
@@ -40,7 +37,7 @@ usePopup(closePopup);
     <form
       class="PopupForm__form"
       :class="{ PopupForm__form_hidden: is_popup_hidden }"
-      @submit.prevent="sendFormRequest(data.lead_title)"
+      @submit.prevent="sendFormRequest()"
     >
       <div class="PopupForm__btnClose" @click="closePopup"></div>
 

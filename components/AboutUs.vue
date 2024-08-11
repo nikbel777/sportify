@@ -1,6 +1,6 @@
 <template>
   <section class="AboutUs">
-    <h2 class="AboutUs__h2">О нас</h2>
+    <h2 class="AboutUs__h2" id="about_us">О нас</h2>
     <div class="AboutUs__cards">
       <div class="AboutUs__cardOne">
         <div class="AboutUs__cardOneInfo">
@@ -231,6 +231,92 @@
   }
   .AboutUs__cardThreeInfoText {
     font-size: 43px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .AboutUs__cardOne {
+    flex-direction: column;
+  }
+  .AboutUs__cardOneInfoImg {
+    margin-left: 0;
+  }
+
+  .AboutUs__cardOneImg {
+    margin-left: auto;
+  }
+
+  .AboutUs__cardTwo {
+    flex-direction: column;
+  }
+  .AboutUs__cardTwoInfoNumber {
+    text-align: start;
+  }
+
+  .AboutUs__cardTwoInfoText {
+    text-align: start;
+  }
+
+  .AboutUs__cardTwoImg {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .AboutUs__cardThree {
+    flex-direction: column;
+  }
+  .AboutUs__cardThreeInfoText {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 740px) {
+  .AboutUs {
+    padding: 70px var(--inline-offset) 140px;
+  }
+
+  .AboutUs__h2 {
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+  .AboutUs__cards {
+    gap: 80px;
+  }
+  .AboutUs__cardOneInfoNumber {
+    margin-bottom: 25px;
+  }
+  .AboutUs__cardOneInfoText {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+  .AboutUs__cardOneImg {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .AboutUs__cardTwoInfoNumber {
+    margin-bottom: 25px;
+  }
+  .AboutUs__cardTwoInfoText {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+
+  .AboutUs__cardTwoImg {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .AboutUs__cardThreeInfoNumber {
+    margin-bottom: 25px;
+  }
+  .AboutUs__cardThreeInfoText {
+    font-size: 28px;
+    margin-bottom: 60px;
   }
 }
 </style>

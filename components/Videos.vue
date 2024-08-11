@@ -10,11 +10,28 @@
 
 <style lang="scss">
 .Videos {
+  margin-top: -1px;
   padding: 0 var(--inline-offset);
   background-color: #202020;
   video {
     margin: 0 auto;
     width: -webkit-fill-available;
+  }
+}
+
+@media (max-width: 740px) {
+  .Videos {
+    padding: 70px var(--inline-offset);
+  }
+}
+
+@media (max-width: 600px) {
+  .Videos {
+    padding: 70px var(--inline-offset);
+    video {
+      height: auto;
+      width: 100%;
+    }
   }
 }
 </style>

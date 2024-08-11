@@ -5,11 +5,15 @@ var { user_name, user_phone, error_user_name, error_user_phone, sendFormRequest 
 
 <template>
   <section class="TrialSession">
+    <h5 class="TrialSession__infoH5 TrialSession__infoH5_mobile">
+      Бесплатное пробное <br />
+      занятие
+    </h5>
     <div class="TrialSession__img">
       <img src="/img/session.png" alt="" width="600" height="745" />
     </div>
     <div class="TrialSession__info">
-      <h5 class="TrialSession__infoH5">
+      <h5 class="TrialSession__infoH5 TrialSession__infoH5_desctop">
         Бесплатное пробное <br />
         занятие
       </h5>
@@ -71,6 +75,11 @@ var { user_name, user_phone, error_user_name, error_user_phone, sendFormRequest 
   margin-left: -230px;
   text-align: end;
 }
+
+.TrialSession__infoH5_mobile {
+  display: none;
+}
+
 .TrialSession__infoForm {
   margin-left: 70px;
   margin-top: 260px;
@@ -129,6 +138,51 @@ var { user_name, user_phone, error_user_name, error_user_phone, sendFormRequest 
 @media (max-width: 1300px) {
   .TrialSession__infoForm {
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .TrialSession {
+    flex-direction: column;
+  }
+  .TrialSession__infoH5 {
+    position: relative;
+    font-size: 70px;
+    line-height: 100%;
+    margin-left: 0;
+    text-align: start;
+    width: fit-content;
+  }
+
+  .TrialSession__infoH5_mobile {
+    display: block;
+  }
+
+  .TrialSession__infoH5_desctop {
+    display: none;
+  }
+  .TrialSession__infoForm {
+    margin-top: 0;
+  }
+  .TrialSession__img {
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .TrialSession {
+    padding: 70px var(--inline-offset);
+  }
+
+  .TrialSession__infoH5 {
+    font-size: 35px;
+  }
+  .TrialSession__infoFormBtn{
+    font-size: 20px;
   }
 }
 </style>

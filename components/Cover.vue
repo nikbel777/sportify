@@ -10,10 +10,7 @@ const clickCoverBtn = () => {
       text_content:
         "Укажите имя и телефон, мы свяжемся и ответим на все ваши интересующие вопросы.",
       text_btn: `Оставить заявку`,
-      lead_title: `уалейкум асалам (из описания квартиры)`,
-      cbSuccessFetch() {
-        ymReachGoal("send_detail-card_plan_order");
-      },
+
     },
   };
 };
@@ -22,12 +19,12 @@ const clickCoverBtn = () => {
 <template>
   <section class="Cover">
     <h2 class="Cover__h2">Sportify - будь на одной волне со спортом</h2>
-    <img class="Cover__img" src="/img/cover.png" alt="" srcset="" width="1400" height="760" />
+    <img class="Cover__img" src="/img/cover.JPG" alt="" srcset="" width="1400" height="760" />
     <div class="Cover__information">
       <div class="Cover__informationJoin">
         <h5 class="Cover__informationJoinH5">Присоединяйся к нам</h5>
         <button class="Cover__informationJoinBtn" @click="clickCoverBtn()">Оставить заявку</button>
-        <button class="Cover__informationJoinBtn">Telegram</button>
+        <a href="https://t.me/sport_ify" class="Cover__informationJoinBtn">Telegram</a>
       </div>
       <p class="Cover__informationP">
         Приглашаем вас на&nbsp;индивидуальные тренировки, где квалифицированные тренеры помогут вам
@@ -58,6 +55,7 @@ const clickCoverBtn = () => {
 }
 
 .Cover__img {
+  border-radius: 35px;
   width: 100%;
   height: auto;
   margin-bottom: 60px;
@@ -103,6 +101,7 @@ const clickCoverBtn = () => {
   font-weight: 500;
   font-size: 30px;
   line-height: 150%;
+  text-align: center;
 
   color: #92918e;
 
@@ -119,6 +118,41 @@ const clickCoverBtn = () => {
   &:hover {
     color: #202020;
     background-color: #92918e;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .Cover__h2 {
+    font-size: 58px;
+  }
+
+  .Cover__information {
+    flex-direction: column;
+  }
+  .Cover__informationJoin {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .Cover {
+    padding: 70px var(--inline-offset);
+  }
+  .Cover__h2 {
+    font-size: 44px;
+    margin-bottom: 40px;
+  }
+  .Cover__img {
+    margin-bottom: 40px;
+  }
+  .Cover__informationJoinH5 {
+    font-size: 30px;
+  }
+  .Cover__informationJoinBtn {
+    font-size: 20px;
+  }
+  .Cover__informationP {
+    font-size: 16px;
   }
 }
 </style>

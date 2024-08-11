@@ -10,10 +10,7 @@ const clickCardBtn = () => {
       text_content:
         "Укажите имя и телефон, мы свяжемся и ответим на все ваши интересующие вопросы.",
       text_btn: `Оставить заявку`,
-      lead_title: `уалейкум асалам (из описания квартиры)`,
-      cbSuccessFetch() {
-        ymReachGoal("send_detail-card_plan_order");
-      },
+
     },
   };
 };
@@ -49,7 +46,7 @@ var array_products = [
 
 <template>
   <section class="Products">
-    <h5 class="Products__h5">Услуги</h5>
+    <h5 class="Products__h5" id="services">Услуги</h5>
 
     <div class="Products__Cards" v-grabscroll>
       <div class="Products__Card" v-for="product in array_products">
@@ -69,7 +66,7 @@ var array_products = [
 
 <style lang="scss">
 .Products {
-  padding:0 0 200px 0;
+  padding: 0 0 200px 0;
   background-color: #202020;
 }
 .Products__h5 {
@@ -163,6 +160,40 @@ var array_products = [
   &:hover {
     color: #202020;
     background-color: #92918e;
+  }
+}
+
+@media (max-width: 1170px) {
+  .Products__h5 {
+    font-size: 70px;
+  }
+  .Products__CardCostPrice {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 740px) {
+  .Products {
+    padding: 70px 0;
+  }
+  .Products__h5{
+    font-size: 44px;
+    line-height: 100%;
+  }
+  .Products__Cards{
+    gap: 20px;
+  }
+  .Products__CardImg{
+    max-width: 300px;
+  }
+  .Products__CardImgP{
+    font-size: 19px;
+  }
+  .Products__CardCostPrice{
+    font-size: 44px;
+  }
+  .Products__CardButton{
+    font-size: 20px;
   }
 }
 </style>

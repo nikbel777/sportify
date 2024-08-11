@@ -12,21 +12,17 @@
         />
       </div>
       <div class="AboutAutor__socialLinks">
-        <img class="AboutAutor__socialLink" src="/icons/vk.png" alt="" width="35" height="35" />
-        <!-- <img
-          class="AboutAutor__socialLink"
-          src="/icons/whats_app.png"
-          alt=""
-          width="35"
-          height="35"
-        /> -->
-        <img
-          class="AboutAutor__socialLink"
-          src="/icons/telegramm.png"
-          alt=""
-          width="35"
-          height="35"
-        />
+        <a href="https://vk.com/sport_ify"
+          ><img class="AboutAutor__socialLink" src="/icons/vk.png" alt="" width="35" height="35"
+        /></a>
+        <a href="https://t.me/sport_ify">
+          <img
+            class="AboutAutor__socialLink"
+            src="/icons/telegramm.png"
+            alt=""
+            width="35"
+            height="35"
+        /></a>
       </div>
     </div>
 
@@ -108,5 +104,30 @@
   line-height: 150%;
 
   color: #202020;
+}
+
+@media screen and (max-width: 1170px) {
+  .AboutAutor__informationH4 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .AboutAutor {
+    padding: 70px var(--inline-offset);
+  }
+  .AboutAutor__information {
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+    }
+  }
+  .AboutAutor__informationH4 {
+    font-size: 35px;
+  }
+  .AboutAutor__informationP {
+    font-size: 16px;
+  }
 }
 </style>

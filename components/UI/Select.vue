@@ -89,7 +89,6 @@ onMounted(() => {
   display: inline-block;
   max-width: 350px;
   width: 100%;
-  
 }
 
 .SelectSelected {
@@ -171,5 +170,11 @@ onMounted(() => {
 .SelectItem:hover,
 .same-as-selected {
   background-color: #f1f1f1;
+}
+
+@media (max-width: 740px) {
+  .SelectSelected {
+    font-size: 14px;
+  }
 }
 </style>

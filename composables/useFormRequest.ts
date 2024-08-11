@@ -37,16 +37,19 @@ export default (cbSuccessFetch?: () => void, popup_notify_props_success?: IPopup
 
     try {
       is_app_loading.value = true
+
+      console.log(1111111);
       
-      await $fetch('/api/sendForm', {
-        method: 'post',
-        body: {
-          name: user_name.value,
-          phone: user_phone.value,
-          lead_title: 'Сайт каталог - ' + lead_title,
-          ...utm,
-        },
-      })
+
+      // await $fetch('', {
+      //   method: 'post',
+      //   body: {
+      //     name: user_name.value,
+      //     phone: user_phone.value,
+      //     lead_title: 'Сайт каталог - ' + lead_title,
+      //     ...utm,
+      //   },
+      // })
 
       cbSuccessFetch?.()
       // ymReachGoal('send-form_any') //ym_target - Код: Успешно отправленные формы

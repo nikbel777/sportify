@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import type { IPopupCalloriesProps } from "@/components/PopupCallories.vue";
+
 interface IParams {
   gender: "man" | "woman";
   age: number | null;
   height: number | null;
   weight: number | null;
 }
+
+var popup_callories_props = useState<IPopupCalloriesProps | null>("popup_callories_props", () => null); //prettier-ignore
 
 var select_loads = [
   {
@@ -58,8 +62,8 @@ var is_disabled = computed(
 );
 
 var callories = ref<number>(0);
-var callories_for_skinny = ref<number>();
-var callories_for_fat = ref<number>();
+var callories_for_skinny = ref<number>(0);
+var callories_for_fat = ref<number>(0);
 
 var calcCallories = () => {
   var number_for_gender = params.value.gender === "woman" ? -166 : 5;
@@ -73,12 +77,34 @@ var calcCallories = () => {
   callories_for_skinny.value = callories.value - (callories.value * 20) / 100;
 
   callories_for_fat.value = callories.value + (callories.value * 20) / 100;
+
+  if (window.innerWidth <= 1170) {
+    popup_callories_props.value = {
+      data: {
+        callories: callories.value,
+        callories_for_skinny: callories_for_skinny.value,
+        callories_for_fat: callories_for_fat.value,
+      },
+    };
+  }
+
+  params.value = {
+    gender: "man",
+    age: null,
+    height: null,
+    weight: null,
+  };
+
+  load.value = {
+    label: "",
+    active: 0,
+  };
 };
 </script>
 
 <template>
   <section class="BlockCallories">
-    <div class="BlockCallories__h5">Расчет калорий</div>
+    <div class="BlockCallories__h5" id="calculate">Расчет калорий</div>
     <div class="BlockCallories__callories">
       <div class="BlockCallories__form">
         <div class="BlockCallories__parametr">
@@ -153,7 +179,7 @@ var calcCallories = () => {
         <p class="BlockCallories__answerP">
           Введите ваши параметры для расчета калорий для набора массы или похудения
         </p>
-        <div class="BlockCallories__answerContent" :class="{callories_view: callories}">
+        <div class="BlockCallories__answerContent" :class="{ callories_view: callories }">
           <div class="BlockCallories__answerContentItem">
             <p class="BlockCallories__answerContentP">
               Количество калорий для сохранения текущего веса:
@@ -366,4 +392,59 @@ input[type="radio"] {
   transition: opacity 0.5s linear;
 }
 
+@media (max-width: 1170px) {
+  .BlockCallories__h5 {
+    font-size: 70px;
+    margin-bottom: 60px;
+  }
+  .BlockCallories__callories {
+    flex-direction: column;
+  }
+  .BlockCallories__form {
+    order: 1;
+  }
+  .BlockCallories__answerContent {
+    display: none;
+  }
+}
+
+@media (max-width: 740px) {
+  .BlockCallories {
+    padding: 140px var(--inline-offset) 70px;
+  }
+  .BlockCallories__h5 {
+    font-size: 42px;
+    line-height: 100%;
+    margin-bottom: 20px;
+  }
+  .BlockCallories__answerP {
+    line-height: 150%;
+    font-size: 18px;
+  }
+  .BlockCallories__parametr{
+    gap: 10px;
+  }
+  .BlockCallories__parametrUnits{
+    display: none;
+  }
+  .BlockCallories__parametrInputManP{
+    font-size: 18px;
+  }
+  .BlockCallories__parametrInputGender{
+    gap: 10px;
+  }
+  .BlockCallories__parametrLabel{
+    max-width: 78px;
+    font-size: 16px;
+  }
+  .BlockCallories__parametrInput{
+    font-size: 16px;
+  }
+  .BlockCallories__formBtn {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+    font-size: 20px;
+  }
+}
 </style>

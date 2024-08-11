@@ -27,8 +27,27 @@ var idx_rewiev = ref(0);
   <section class="Reviews">
     <div class="Reviews__wrapper">
       <div class="Reviews__imgBg"></div>
-      <h5 class="Reviews__h5">Отзывы</h5>
+      <h5 class="Reviews__h5" id="reviews">Отзывы</h5>
       <div class="Reviews__contentWrapper">
+        <button
+          class="Reviews__informationBtn prev btn_mob"
+          :class="{ disabled_btn: idx_rewiev === 0 }"
+          :disabled="idx_rewiev === 0"
+          @click="idx_rewiev--"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30px"
+            height="30px"
+            viewBox="0 0 1024 1024"
+            class="icon"
+            version="1.1"
+            fill="#92918e"
+            style="transform: rotate(-180deg)"
+          >
+            <path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z" />
+          </svg>
+        </button>
         <div
           class="Reviews__content"
           v-for="(rewiev, idx) in array_rewievs"
@@ -42,9 +61,28 @@ var idx_rewiev = ref(0);
             <p class="Reviews__informationP" v-html="rewiev.description"></p>
           </div>
         </div>
+
+        <button
+          class="Reviews__informationBtn next btn_mob"
+          :class="{ disabled_btn: idx_rewiev === array_rewievs.length - 1 }"
+          :disabled="idx_rewiev === array_rewievs.length - 1"
+          @click="idx_rewiev++"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30px"
+            height="30px"
+            viewBox="0 0 1024 1024"
+            class="icon"
+            version="1.1"
+            fill="#92918e"
+          >
+            <path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z" />
+          </svg>
+        </button>
       </div>
 
-      <div class="Reviews__informationBtns">
+      <div class="Reviews__informationBtns btn_des">
         <button
           class="Reviews__informationBtn prev"
           :class="{ disabled_btn: idx_rewiev === 0 }"
@@ -92,9 +130,16 @@ var idx_rewiev = ref(0);
   padding: 200px 0;
   background-color: #202020;
 }
-.Reviews__wrapper{
+.Reviews__wrapper {
   margin: 0 var(--inline-offset);
   position: relative;
+}
+
+.btn_mob {
+  display: none;
+}
+
+.btn_des {
 }
 
 .Reviews__imgBg {
@@ -137,11 +182,6 @@ var idx_rewiev = ref(0);
 }
 .Reviews__img {
   width: 550px;
-  // width: 100%;
-  // img {
-  //   width: 100%;
-  //   height: auto;
-  // }
 }
 
 .Reviews__information {
@@ -206,6 +246,128 @@ var idx_rewiev = ref(0);
     svg {
       fill: #92918e;
     }
+  }
+}
+
+@media (max-width: 1170px) {
+  .Reviews__h5 {
+    font-size: 70px;
+  }
+  .btn_mob {
+    display: block;
+  }
+
+  .btn_des {
+    display: none;
+  }
+  .Reviews__imgBg {
+    display: none;
+  }
+
+  .Reviews__img {
+    width: 350px;
+    height: 350px;
+    img {
+      width: 100%;
+      height: 350px;
+    }
+  }
+  .Reviews__contentWrapper {
+    height: auto;
+    height: 930px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Reviews__content {
+    width: 350px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .Reviews__information {
+    margin-top: 40px;
+  }
+
+  .is_visible {
+    opacity: 1;
+    transition: opacity 0.2s linear;
+  }
+}
+
+@media (max-width: 740px) {
+  .Reviews {
+    padding: 70px 0;
+  }
+  .Reviews__h5 {
+    font-size: 44px;
+    line-height: 100%;
+    margin-bottom: 40px;
+  }
+  .Reviews__informationTitle {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .Reviews__informationP {
+    font-size: 14px;
+  }
+  .Reviews__informationBtn {
+    padding: 10px 15px;
+  }
+
+  .Reviews__img {
+    width: 280px;
+    height: 280px;
+    img {
+      width: 100%;
+      height: 280px;
+    }
+  }
+  .Reviews__contentWrapper {
+    height: 640px;
+  }
+  .Reviews__content {
+    width: 280px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Reviews__informationBtn {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+
+  }
+}
+
+
+@media (max-width: 410px) {
+  .Reviews__informationTitle {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .Reviews__informationP {
+    font-size: 12px;
+  }
+  .Reviews__img {
+    width: 240px;
+    height: 240px;
+    img {
+      width: 100%;
+      height: 240px;
+    }
+  }
+  .Reviews__contentWrapper {
+    height: 575px;
+  }
+  .Reviews__content {
+    width: 240px;
   }
 }
 </style>
