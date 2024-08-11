@@ -10,6 +10,14 @@ const closeBurger = () => {
   // document.body.classList.remove("scroll-none");
 };
 
+watch(active__burger, () => {
+  if (active__burger.value) {
+    document.body.classList.add("scroll-none");
+    return
+  }
+   document.body.classList.remove("scroll-none");
+});
+
 onMounted(() => {
   const links = document.querySelectorAll("a[href^='#']");
   links.forEach((link) => {
@@ -175,7 +183,8 @@ onMounted(() => {
     top: 30px !important;
     right: 25px !important;
   }
-  .Header__logo{}
+  .Header__logo {
+  }
   .headerLinks {
     font-size: 18px;
   }
