@@ -306,7 +306,7 @@ var calcCallories = () => {
 input[type="radio"] {
   width: 30px;
   height: 30px;
-  accent-color: #202020; /* Задаем нужный цвет. */
+  // accent-color: #202020; /* Задаем нужный цвет. */
   cursor: pointer;
 }
 

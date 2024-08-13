@@ -670,7 +670,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-B786hAYu.mjs').then((m) => m.default || m)
+    component: () => import('./index-FMyBb67y.mjs').then((m) => m.default || m)
   },
   {
     name: "policy",
