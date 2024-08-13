@@ -68,7 +68,8 @@ onMounted(() => {
         <a class="Header__linkA" href="#questions">Вопросы</a>
         <a class="Header__linkA" href="#reviews">Отзывы</a>
       </div>
-      <a class="Header__phoneA" href="+9220092647">+7 (922) 009-26-47</a>
+
+      <a class="Header__phoneA" href="tel:+79220092647">+7 (922) 009-26-47</a>
     </div>
   </section>
 </template>

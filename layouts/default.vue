@@ -5,6 +5,14 @@ import type { IPopupFormProps } from "@/components/PopupForm.vue";
 
 import type { IPopupCalloriesProps } from "@/components/PopupCallories.vue";
 
+useHead({
+  title: "Sportify - будь на одной волне со спортом",
+  htmlAttrs: { lang: "ru" },
+  link: [
+    { rel:"icon", href:"icons/header_burger_logo.svg", type:"image/x-icon" }, //prettier-ignore
+  ],
+});
+
 var popup_form_props = useState<IPopupFormProps | null>("popup_form_props", () => null); //prettier-ignore
 
 var popup_callories_props = useState<IPopupCalloriesProps | null>("popup_callories_props", () => null); //prettier-ignore

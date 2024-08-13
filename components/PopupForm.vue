@@ -210,6 +210,7 @@ usePopup(closePopup);
   font-weight: 500;
   line-height: 155%; /* 21.7px */
   background-color: white;
+  color: #2e2e2e;
   border: none;
   transition: all 0.2s ease-in-out;
   &:hover {
