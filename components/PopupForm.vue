@@ -70,7 +70,7 @@ usePopup(closePopup);
       <p class="PopupForm__offer">
         Отправляя заявку, вы соглашаетесь на обработку персональных данных и получение сервисных,
         рекламных сообщений в целях рассмотрения обращения согласно
-        <NuxtLink @click="closePopup" to="https://72dom.com/soglasie" class="PopupForm__link"
+        <NuxtLink @click="closePopup" to="/policy" class="PopupForm__link"
           >политике конфиденциальности.</NuxtLink
         >
       </p>

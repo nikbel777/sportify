@@ -184,7 +184,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       _push(`<button class="PopupForm__btn" type="submit">${ssrInterpolate(_ctx.data.text_btn)}</button><p class="PopupForm__offer"> \u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u044F \u0437\u0430\u044F\u0432\u043A\u0443, \u0432\u044B \u0441\u043E\u0433\u043B\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044C \u043D\u0430 \u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445 \u0438 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u043D\u044B\u0445, \u0440\u0435\u043A\u043B\u0430\u043C\u043D\u044B\u0445 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0439 \u0432 \u0446\u0435\u043B\u044F\u0445 \u0440\u0430\u0441\u0441\u043C\u043E\u0442\u0440\u0435\u043D\u0438\u044F \u043E\u0431\u0440\u0430\u0449\u0435\u043D\u0438\u044F \u0441\u043E\u0433\u043B\u0430\u0441\u043D\u043E `);
       _push(ssrRenderComponent(_component_NuxtLink, {
         onClick: unref(closePopup),
-        to: "https://72dom.com/soglasie",
+        to: "/policy",
         class: "PopupForm__link"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -268,4 +268,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=default-Dr16VczS.mjs.map
+//# sourceMappingURL=default-kUUr3OUT.mjs.map

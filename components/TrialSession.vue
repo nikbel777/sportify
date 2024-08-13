@@ -39,7 +39,7 @@ var { user_name, user_phone, error_user_name, error_user_phone, sendFormRequest 
         <p class="TrialSession__infoFormOffer">
           Отправляя заявку, вы соглашаетесь на обработку персональных данных и получение сервисных,
           рекламных сообщений в целях рассмотрения обращения согласно
-          <NuxtLink to="https://72dom.com/soglasie" class="TrialSession__infoFormLink"
+          <NuxtLink to="/policy" class="TrialSession__infoFormLink"
             >политике конфиденциальности.</NuxtLink
           >
         </p>
