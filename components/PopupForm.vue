@@ -197,6 +197,9 @@ usePopup(closePopup);
 .PopupForm__input {
   min-width: 480px;
   margin-bottom: 40px;
+  .Input__input--popup{
+    font-size: 16px;
+  }
 }
 
 .PopupForm__btn {

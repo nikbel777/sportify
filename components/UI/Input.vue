@@ -1,72 +1,72 @@
 <script lang="ts" setup>
 interface IInputProps {
-  placeholder: string
-  useMask?: boolean
-  modelValue: string
-  error_message: string
-  popup?: boolean
+  placeholder: string;
+  useMask?: boolean;
+  modelValue: string;
+  error_message: string;
+  popup?: boolean;
 }
 
-var props = defineProps<IInputProps>()
+var props = defineProps<IInputProps>();
 
-var emit = defineEmits(['update:modelValue'])
-var node_Input = ref<HTMLInputElement>()
+var emit = defineEmits(["update:modelValue"]);
+var node_Input = ref<HTMLInputElement>();
 // --------------------- PHONE MASK (start ---------------------
 
 var setValue = (event: InputEvent) => {
-  var value = (<HTMLInputElement>event.target).value
+  var value = (<HTMLInputElement>event.target).value;
   if (!props.useMask) {
-    emit('update:modelValue', value)
-    return
+    emit("update:modelValue", value);
+    return;
   }
 
   var newValue = [...value]
-    .filter((char) => char >= '0' && char <= '9')
+    .filter((char) => char >= "0" && char <= "9")
     .slice(0, 11)
-    .join('')
+    .join("");
 
   if (props.modelValue === newValue) {
-    node_Input.value!.value = getPresentValue(newValue)
+    node_Input.value!.value = getPresentValue(newValue);
   }
 
-  emit('update:modelValue', newValue)
-}
+  emit("update:modelValue", newValue);
+};
 
 var getPresentValue = (str: string) => {
-  if (!props.useMask) return props.modelValue
+  if (!props.useMask) return props.modelValue;
 
-  return [...String(str.replace(/\D+/, ''))]
+  return [...String(str.replace(/\D+/, ""))]
     .map((char, idx) => {
       if (idx === 0) {
-        return '+7'
+        return "+7";
       }
 
       if (idx === 1) {
-        return ' (9'
+        return " (9";
       }
 
       if (idx === 4) {
-        return ') ' + char
+        return ") " + char;
       }
 
       if (idx === 7) {
-        return '-' + char
+        return "-" + char;
       }
 
       if (idx === 9) {
-        return '-' + char
+        return "-" + char;
       }
 
-      return char
+      return char;
     })
-    .join('')
-}
+    .join("");
+};
 
-var input_value = computed(() => getPresentValue(props.modelValue))
+var input_value = computed(() => getPresentValue(props.modelValue));
 
 onMounted(() => {
-  props.useMask && emit('update:modelValue', '7')
-})
+  props.useMask && emit("update:modelValue", "7");
+});
 </script>
 
 <template>
@@ -105,6 +105,9 @@ onMounted(() => {
     border-bottom: 1px solid rgb(148, 147, 147);
     background-color: inherit;
     padding: 20px;
+    &:focus {
+      outline: none;
+    }
   }
 
   &::placeholder {

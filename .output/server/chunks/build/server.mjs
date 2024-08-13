@@ -670,7 +670,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-FMyBb67y.mjs').then((m) => m.default || m)
+    component: () => import('./index-DY8ctXUW.mjs').then((m) => m.default || m)
   },
   {
     name: "policy",
@@ -1051,7 +1051,7 @@ const plugins = [
   grabscroll_Yos3dUxXyb
 ];
 const layouts = {
-  default: () => import('./default-CXLETZKj.mjs').then((m) => m.default || m)
+  default: () => import('./default-MnLPOH35.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",

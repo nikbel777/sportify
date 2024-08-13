@@ -1,7 +1,7 @@
 import { useSSRContext, defineComponent, unref, mergeProps, isRef, ref, watch, resolveDirective, withCtx, createTextVNode } from 'vue';
 import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderClass, ssrRenderAttr, ssrInterpolate, ssrRenderStyle, ssrGetDirectiveProps } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../routes/renderer.mjs';
-import { u as useState, a as useFormRequest, _ as _sfc_main$6 } from './useFormRequest-DvXAQWZo.mjs';
+import { u as useState, a as useFormRequest, _ as _sfc_main$6 } from './useFormRequest-9TuyGHPZ.mjs';
 import { _ as __nuxt_component_0 } from './nuxt-link-DJjkRbFw.mjs';
 import { u as useHead } from './index-BabADJUJ.mjs';
 import 'vue-bundle-renderer/runtime';
@@ -218,6 +218,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       link: [
         { rel: "icon", href: "icons/header_burger_logo.png", type: "image/x-icon" }
         //prettier-ignore
+      ],
+      meta: [
+        {
+          name: "viewport",
+          content: "width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no;user-scalable=0;"
+        }
       ]
     });
     var popup_form_props = useState("popup_form_props", () => null);
@@ -268,4 +274,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=default-CXLETZKj.mjs.map
+//# sourceMappingURL=default-MnLPOH35.mjs.map

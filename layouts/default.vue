@@ -8,8 +8,16 @@ import type { IPopupCalloriesProps } from "@/components/PopupCallories.vue";
 useHead({
   title: "Sportify - будь на одной волне со спортом",
   htmlAttrs: { lang: "ru" },
+
   link: [
     { rel:"icon", href:"icons/header_burger_logo.png", type:"image/x-icon" }, //prettier-ignore
+  ],
+  meta: [
+    {
+      name: "viewport",
+      content:
+        "width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no;user-scalable=0;",
+    },
   ],
 });
 
