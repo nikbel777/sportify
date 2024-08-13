@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { IPopupNotifyProps } from "@/components/PopupNotify.vue";
+import axios from 'axios';
 
 export interface IPopupFormProps {
   data: {
@@ -14,8 +15,21 @@ var props = defineProps<IPopupFormProps>();
 var emit = defineEmits(["close"]);
 
 var { user_name, user_phone, error_user_name, error_user_phone, sendFormRequest } = useFormRequest(
-  () => {
-    closePopup();
+  async () => {
+    try {
+      const response = await axios.post('http://sportify72.ru:5000/contact-request', {
+        name: user_name.value,
+        phone: user_phone.value
+      });
+
+      if (response.status === 200) {
+        closePopup();
+      } else {
+        console.error('Error:', response.data);
+      }
+    } catch (error) {
+      console.error('Request failed:', error);
+    }
   },
   props.data.popup_notify_props_success
 );
