@@ -89,7 +89,7 @@ onMounted(() => {
 }
 .Header__links {
   display: flex;
-  gap: 40px;
+  gap: 25px;
 }
 .Header__linkA {
   font-family: "Bluu Next Cyrillic";
