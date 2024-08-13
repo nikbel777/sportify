@@ -24,7 +24,7 @@ usePopup(closePopup);
 
 <template>
   <div class="PopupNotify" @click.self="closePopup">
-    <form class="PopupNotify__form" :class="{ PopupNotify__content_hidden: is_popup_hidden }">
+    <div class="PopupNotify__form" :class="{ PopupNotify__content_hidden: is_popup_hidden }">
       <div class="PopupCallories__btnClose" @click="closePopup"></div>
       <div class="PopupNotify__iconSucces" v-if="status === 'succes'">
         <svg
@@ -57,7 +57,7 @@ usePopup(closePopup);
           {{ text_btn }}
         </button>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 

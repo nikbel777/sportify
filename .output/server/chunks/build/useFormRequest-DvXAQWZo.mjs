@@ -112,11 +112,21 @@ const useFormRequest = (cbSuccessFetch, popup_notify_props_success) => {
     if (error_user_phone.value || error_user_name.value) {
       return;
     }
-    JSON.parse(localStorage.getItem("utm") || "{}");
     (void 0).cookie = `previousUrl=${(void 0).location.host + route.path + route.hash}`;
     try {
       is_app_loading.value = true;
       console.log(1111111);
+      var body = {
+        name: user_name.value,
+        phone: user_phone.value
+      };
+      await fetch("http://sportify72.ru:5000/contact-request", {
+        method: "post",
+        body: JSON.stringify(body),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
       cbSuccessFetch == null ? void 0 : cbSuccessFetch();
       popup_notify_props.value = popup_notify_props_success || {
         status: "succes",
@@ -144,4 +154,4 @@ const useFormRequest = (cbSuccessFetch, popup_notify_props_success) => {
 };
 
 export { _sfc_main as _, useFormRequest as a, useState as u };
-//# sourceMappingURL=useFormRequest-CFOPN-mE.mjs.map
+//# sourceMappingURL=useFormRequest-DvXAQWZo.mjs.map

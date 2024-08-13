@@ -1,7 +1,7 @@
 import { useSSRContext, defineComponent, unref, mergeProps, isRef, ref, watch, resolveDirective, withCtx, createTextVNode } from 'vue';
 import { ssrRenderComponent, ssrRenderSlot, ssrRenderAttrs, ssrRenderClass, ssrRenderAttr, ssrInterpolate, ssrRenderStyle, ssrGetDirectiveProps } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../routes/renderer.mjs';
-import { u as useState, a as useFormRequest, _ as _sfc_main$6 } from './useFormRequest-CFOPN-mE.mjs';
+import { u as useState, a as useFormRequest, _ as _sfc_main$6 } from './useFormRequest-DvXAQWZo.mjs';
 import { _ as __nuxt_component_0 } from './nuxt-link-DJjkRbFw.mjs';
 import 'vue-bundle-renderer/runtime';
 import '../runtime.mjs';
@@ -96,7 +96,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     var is_popup_hidden = ref(false);
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "PopupNotify" }, _attrs))}><form class="${ssrRenderClass([{ PopupNotify__content_hidden: unref(is_popup_hidden) }, "PopupNotify__form"])}"><div class="PopupCallories__btnClose"></div>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "PopupNotify" }, _attrs))}><div class="${ssrRenderClass([{ PopupNotify__content_hidden: unref(is_popup_hidden) }, "PopupNotify__form"])}"><div class="PopupCallories__btnClose"></div>`);
       if (_ctx.status === "succes") {
         _push(`<div class="PopupNotify__iconSucces"><svg width="50" height="50" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.2189 23.094L6.62489 16.5C6.35422 16.2294 6.03122 16.146 5.65589 16.25C5.28056 16.354 5.04622 16.5884 4.95289 16.953C4.85956 17.3177 4.94822 17.6457 5.21889 17.937L13.2189 25.937L29.2189 9.93702C29.4062 9.72835 29.4949 9.48868 29.4849 9.21802C29.4749 8.94735 29.3706 8.71302 29.1719 8.51502C28.9732 8.31702 28.7439 8.21802 28.4839 8.21802C28.2239 8.21802 27.9896 8.31168 27.7809 8.49902L13.2189 23.094Z" fill="black"></path></svg></div>`);
       } else {
@@ -123,7 +123,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       } else {
         _push(`<!---->`);
       }
-      _push(`</div></form></div>`);
+      _push(`</div></div></div>`);
     };
   }
 });
@@ -259,4 +259,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=default-CNkif9i4.mjs.map
+//# sourceMappingURL=default-BpTmUYBH.mjs.map
