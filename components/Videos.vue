@@ -2,7 +2,7 @@
 
 <template>
   <section class="Videos">
-    <video autoplay muted loop width="713" height="1000">
+    <video autoplay loop muted playsinline width="713" height="1000">
       <source src="/video/video_tran.mp4" type="video/mp4" />
     </video>
   </section>

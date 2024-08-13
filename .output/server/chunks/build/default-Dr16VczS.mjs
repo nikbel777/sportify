@@ -20,7 +20,7 @@ import './server.mjs';
 import 'vue-router';
 
 const _imports_0$1 = publicAssetsURL("/icons/header_logo.svg");
-const _imports_1$1 = publicAssetsURL("/icons/header_burger_logo.svg");
+const _imports_1$1 = publicAssetsURL("/icons/header_burger_logo.png");
 const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   __name: "Header",
   __ssrInlineRender: true,
@@ -216,7 +216,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       title: "Sportify - \u0431\u0443\u0434\u044C \u043D\u0430 \u043E\u0434\u043D\u043E\u0439 \u0432\u043E\u043B\u043D\u0435 \u0441\u043E \u0441\u043F\u043E\u0440\u0442\u043E\u043C",
       htmlAttrs: { lang: "ru" },
       link: [
-        { rel: "icon", href: "icons/header_burger_logo.svg", type: "image/x-icon" }
+        { rel: "icon", href: "icons/header_burger_logo.png", type: "image/x-icon" }
         //prettier-ignore
       ]
     });
@@ -268,4 +268,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=default-BwkfVN_1.mjs.map
+//# sourceMappingURL=default-Dr16VczS.mjs.map

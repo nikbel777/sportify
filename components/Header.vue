@@ -60,7 +60,7 @@ onMounted(() => {
     <div class="Header__information" :class="{ 'burger-menu': active__burger }">
       <div class="Header__links">
         <div id="burgerMenu-logo" class="Header__burgerLogo">
-          <img src="/icons/header_burger_logo.svg" alt="" srcset="" width="140" height="60" />
+          <img src="/icons/header_burger_logo.png" alt="" srcset="" width="140" height="60" />
         </div>
         <a class="Header__linkA" href="#about_us">О нас</a>
         <a class="Header__linkA" href="#calculate">Калькулятор</a>

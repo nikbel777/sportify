@@ -9,7 +9,7 @@ useHead({
   title: "Sportify - будь на одной волне со спортом",
   htmlAttrs: { lang: "ru" },
   link: [
-    { rel:"icon", href:"icons/header_burger_logo.svg", type:"image/x-icon" }, //prettier-ignore
+    { rel:"icon", href:"icons/header_burger_logo.png", type:"image/x-icon" }, //prettier-ignore
   ],
 });
 

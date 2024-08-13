@@ -286,7 +286,7 @@ _sfc_main$5.setup = (props, ctx) => {
 const _imports_0$1 = publicAssetsURL("/video/video_tran.mp4");
 const _sfc_main$4 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
-  _push(`<section${ssrRenderAttrs(mergeProps({ class: "Videos" }, _attrs))}><video autoplay muted loop width="713" height="1000"><source${ssrRenderAttr("src", _imports_0$1)} type="video/mp4"></video></section>`);
+  _push(`<section${ssrRenderAttrs(mergeProps({ class: "Videos" }, _attrs))}><video autoplay loop muted playsinline width="713" height="1000"><source${ssrRenderAttr("src", _imports_0$1)} type="video/mp4"></video></section>`);
 }
 const _sfc_setup$4 = _sfc_main$4.setup;
 _sfc_main$4.setup = (props, ctx) => {
@@ -425,4 +425,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { index as default };
-//# sourceMappingURL=index-fo6P-3uQ.mjs.map
+//# sourceMappingURL=index-DFWnS4P-.mjs.map
