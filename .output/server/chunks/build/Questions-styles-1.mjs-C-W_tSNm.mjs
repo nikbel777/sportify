@@ -1,0 +1,4 @@
+const Questions_vue_vue_type_style_index_0_lang = ".Questions{background-color:#f5f5f5;padding:200px var(--inline-offset)}.Questions__h2{color:#202020;font-family:Bluu Next Cyrillic;font-size:96px;font-style:normal;font-weight:700;line-height:100px;margin-bottom:90px;max-width:840px}.Questions__list{border-bottom:1px solid #92918e}@media (max-width:1170px){.Questions__h2{font-size:70px}.QuestionItem__labelP{font-size:35px}}@media (max-width:740px){.Questions{padding:70px var(--inline-offset)}.Questions__h2{font-size:38px;line-height:100%;margin-bottom:30px}.QuestionItem{padding:15px 0}.QuestionItem__label{gap:15px}.QuestionItem__label img{height:20px;width:20px}.QuestionItem__labelP{font-size:20px;text-align:end}.QuestionItem__answer_content{font-size:14px}}";
+
+export { Questions_vue_vue_type_style_index_0_lang as Q };
+//# sourceMappingURL=Questions-styles-1.mjs-C-W_tSNm.mjs.map
