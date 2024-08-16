@@ -25,7 +25,6 @@ export default (cbSuccessFetch?: () => void, popup_notify_props_success?: IPopup
   };
 
   var sendFormRequest = async (lead_title?: string | undefined) => {
-    console.log(111111);
 
     validateForm();
     if (error_user_phone.value || error_user_name.value) {
@@ -37,8 +36,6 @@ export default (cbSuccessFetch?: () => void, popup_notify_props_success?: IPopup
 
     try {
       is_app_loading.value = true;
-
-      console.log(1111111);
 
       var body = {
         name: user_name.value,

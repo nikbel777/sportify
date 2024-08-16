@@ -207,7 +207,7 @@ onMounted(() => {
 }
 
 .header__burger {
-  display: block;
+  display: none;
 }
 .active__burger {
   display: inherit !important;

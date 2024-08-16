@@ -10,37 +10,31 @@ const clickCardBtn = () => {
       text_content:
         "Укажите имя и телефон, мы свяжемся и ответим на все ваши интересующие вопросы.",
       text_btn: `Оставить заявку`,
-
     },
   };
 };
 
 var array_products = [
   {
-    src: "/img/Product1.png",
+    src: "/img/Product3.png",
     title_img: "Индивидуальная программа питания на месяц",
     cost: "1490",
   },
   {
-    src: "/img/Product2.png",
+    src: "/img/first_trening.jpg",
     title_img: "Разовая тренировка",
     cost: "390",
   },
   {
-    src: "/img/Product3.png",
+    src: "/img/Product1.png",
     title_img: "Программа тренировок на месяц",
     cost: "от 3500",
   },
   {
-    src: "/img/Product4.png",
+    src: "/img/programm_trening.jpg",
     title_img: "Программа тренировок с питанием",
     cost: "от 5000",
   },
-  // {
-  //   src: "/img/Product1.png",
-  //   title_img: "Индивидуальная программа питания на месяц",
-  //   cost: "1490",
-  // },
 ];
 </script>
 
@@ -49,8 +43,8 @@ var array_products = [
     <h5 class="Products__h5" id="services">Услуги</h5>
 
     <div class="Products__Cards" v-grabscroll>
-      <div class="Products__Card" v-for="product in array_products">
-        <div class="Products__CardImg">
+      <div class="Products__Card" v-for="(product, idx) in array_products" :key="product.cost">
+        <div class="Products__CardImg" :class="'Products__CardImg' + idx">
           <img :src="product.src" alt="" width="450" height="450" />
           <p class="Products__CardImgP">{{ product.title_img }}</p>
         </div>
@@ -101,9 +95,25 @@ var array_products = [
   width: 450px;
   img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: 0% 30%;
   }
 }
+
+.Products__CardImg1 {
+  img {
+    filter: brightness(60%);
+  }
+}
+
+.Products__CardImg3 {
+  img {
+    filter: brightness(60%);
+  }
+}
+
 
 .Products__CardImgP {
   position: absolute;
@@ -176,23 +186,27 @@ var array_products = [
   .Products {
     padding: 70px 0;
   }
-  .Products__h5{
+  .Products__h5 {
     font-size: 44px;
     line-height: 100%;
   }
-  .Products__Cards{
+  .Products__Cards {
     gap: 20px;
   }
-  .Products__CardImg{
+  .Products__CardImg {
     max-width: 300px;
+    img {
+      height: 300px;
+      filter: brightness(40%);
+    }
   }
-  .Products__CardImgP{
+  .Products__CardImgP {
     font-size: 19px;
   }
-  .Products__CardCostPrice{
+  .Products__CardCostPrice {
     font-size: 44px;
   }
-  .Products__CardButton{
+  .Products__CardButton {
     font-size: 20px;
   }
 }

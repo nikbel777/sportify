@@ -46,7 +46,7 @@ var params = ref<IParams>({
 });
 
 const isNumber = (evt: Event) => {
-  console.log(1);
+
 
   const input = evt.target as HTMLInputElement;
   const value = input.value;
@@ -54,7 +54,6 @@ const isNumber = (evt: Event) => {
   const sanitizedValue = value.replace(/\D+/g, "");
 
   input.value = sanitizedValue;
-  console.log(input.value);
 };
 
 var is_disabled = computed(

@@ -76,7 +76,7 @@ var is_open = ref(false);
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 140%;
 
   color: #202020;
