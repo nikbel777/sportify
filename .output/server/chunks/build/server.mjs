@@ -670,12 +670,12 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-Y5MiRU-S.mjs').then((m) => m.default || m)
+    component: () => import('./index-CIGFlz-k.mjs').then((m) => m.default || m)
   },
   {
     name: "policy",
     path: "/policy",
-    component: () => import('./policy-D7ZoEUhl.mjs').then((m) => m.default || m)
+    component: () => import('./policy-CeRK3dVu.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -1051,7 +1051,7 @@ const plugins = [
   grabscroll_Yos3dUxXyb
 ];
 const layouts = {
-  default: () => import('./default-DgRUmHI-.mjs').then((m) => m.default || m)
+  default: () => import('./default-DY54FVJC.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",

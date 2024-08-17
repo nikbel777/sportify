@@ -118,7 +118,7 @@ const useFormRequest = (cbSuccessFetch, popup_notify_props_success) => {
         name: user_name.value,
         phone: user_phone.value
       };
-      await fetch("http://sportify72.ru:5000/contact-request", {
+      await fetch("https://sportify72.ru/api/contact-request", {
         method: "post",
         body: JSON.stringify(body),
         headers: {
@@ -152,4 +152,4 @@ const useFormRequest = (cbSuccessFetch, popup_notify_props_success) => {
 };
 
 export { _sfc_main as _, useFormRequest as a, useState as u };
-//# sourceMappingURL=useFormRequest-AiB_2TPP.mjs.map
+//# sourceMappingURL=useFormRequest-BQEJ8Zrn.mjs.map

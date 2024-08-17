@@ -42,7 +42,7 @@ export default (cbSuccessFetch?: () => void, popup_notify_props_success?: IPopup
         phone: user_phone.value,
       };
 
-      await fetch("http://sportify72.ru:5000/contact-request", {
+      await fetch("https://sportify72.ru/api/contact-request", {
         method: "post",
         body: JSON.stringify(body),
         headers: {
